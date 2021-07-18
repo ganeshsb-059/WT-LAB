@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        h3 {
+            font-size:xx-large;
+            font-style: normal;
+            font-weight: bold;
+            font-family: fantasy;
+        }
+        b {
+            text-align: center;
+            font-style: normal;
+            font-size: x-large;  
+            font-family: sans-serif;
+        }
+    </style>
+<title> Fibonacci </title>
+</head>
+<body style="background-color:aqua"> 
+<h3 style="text-align:center; color:black"><u>FIBONACCI SERIES</u> </h3>
+<script type="text/javascript">
+
+var limit = prompt("Enter the limit n to generate the fibonacci series:", " ");
+var f1=0;
+var f2=1;
+
+document.write("<b>The limit entered is : </b>",limit, "<br/>");
+document.write("<b>The fibonacci series : </b>");
+document.write("",f1," ");
+document.write("",f2," ");
+ 
+var i,f3;
+for(i=2; i<limit; i++)
+{
+	 f3=f1+f2;
+	 document.write("",f3," ");
+	 f1=f2;
+	 f2=f3;
+}
+
+</script>
+</body>
+</html>

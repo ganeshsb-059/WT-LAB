@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<style>
+    html{
+background-color:lightblue ;
+}
+body{
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: sans-serif;
+    outline-style: double;
+    outline-width: 5px;
+    outline-color: red;
+}
+h2{
+    font-family: fantasy;
+}
+</style>
+<script>
+function armstr()
+{
+var arm=0,a,b,c,d,num;
+num=Number(document.getElementById("no_input").value);
+
+temp=num;
+while(temp>0)
+{
+a=temp%10;
+temp=parseInt(temp/10);
+arm=arm+a*a*a;
+}
+if(arm==num)
+{
+alert("Armstrong number");
+}
+else
+{
+alert("Not Armstrong number");
+}
+}
+</script>
+</head>
+<body>
+    <h2>ARMSTRONG NUMBER</h2>
+    <br>
+    <br>
+Enter any Number: <input id="no_input">
+<button onclick="armstr()">Check</button></br></br>
+</body>
+</html>

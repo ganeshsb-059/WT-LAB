@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h2{
+                text-align: center;
+            font-size:xx-large;
+            font-style: normal;
+            font-weight: bold;
+            font-family: fantasy;
+        }
+        </style>
+    </head>
+  <body>
+      <h2> PUSHING INTO ARRAY </h2>
+    <script type="text/javascript">
+      var number = [];
+      function myFunction() {
+        var x = document.getElementById("box");
+        number.push(document.getElementById("input").value);
+        x.innerHTML = number.join("<br/>");
+      }
+    </script>
+    <form>
+      <input id="input" type="text" />
+      <input type="button" onclick="myFunction()" value="Add Number" />
+    </form>
+    <br />
+    <div
+      id="box";
+      style="
+        border:2px solid red;
+        width: 150px;
+        height: 150px;
+        overflow: auto;
+      "
+    ></div>
+  </body>
+</html>

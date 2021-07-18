@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+
+        <body style="background-color: white">
+
+           
+            
+           
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            var str = "Demonstration string functions";
+            function findLen(){
+                var stlen = str.length;
+                document.getElementById("ln").innerHTML = stlen;
+            }
+            function findTxt(){
+                var txt = document.getElementById("fintxt").value;
+                console.log(txt)
+                var pos = str.search(`${txt}`)
+                document.getElementById("tx").innerHTML = pos;
+            }
+            function slc(){
+                var num1 = document.getElementById("slc1").value;
+                var num2 = document.getElementById("slc2").value;
+                console.log(num1);
+                console.log(num2);
+                var res = str.slice(num1,num2);
+                console.log(res)
+                document.getElementById("sc").innerHTML = res;
+            }
+
+            function conc(){
+            var str1 = document.getElementById("conc1").value;
+            var str2 = document.getElementById("conc2").value;
+            var res = str1.concat(str2);
+            document.getElementById("conc3").innerHTML = res;
+
+        }
+
+        function toupr() {
+  var text = document.getElementById("hh").innerHTML;
+  document.getElementById("hh").innerHTML = text.toUpperCase();
+}
+
+function tolwr() {
+  var text = document.getElementById("hh").innerHTML;
+  document.getElementById("hh").innerHTML = text.toLowerCase();
+}
+function func(){
+	var str=prompt("Enter the string ");
+	var loc=prompt("Enter the string to locate ");
+	var pos = str.search(loc);
+    document.getElementById("de").innerHTML = "The position of word " + loc+ " in string " + str +" is -> " + pos;
+}
+        </script>
+    </head>
+    <body>
+        <h1><U>STRING FUNCTIONS</U></h1>
+        
+        
+        <p>1.Finding the length</p>
+        <P><i>"Demontstration string functions"</i></P>
+        <button onclick="findLen()">Find length</button>
+        <p id="ln"></p><br>
+
+
+        <p>2.Concat</p>
+        <input type="text" id="conc1" placeholder="Enter specific word.." />
+        <input type="text" id="conc2" placeholder="Enter specific word.." />
+        <button onclick="conc()">concatinate</button>
+        <p id="conc3"></p>
+        <br>
+
+           
+        <p>3.Reverse the order</p>
+        <button onclick="myFunction()">Click</button>
+        <p id="demo"></p>
+        <script>
+         var fruits = ["Pink", "Purple", "Blue", "Green"];
+        document.getElementById("demo").innerHTML = fruits;            
+         function myFunction() {
+          fruits.reverse();
+                        document.getElementById("demo").innerHTML = fruits;
+            }
+            </script>
+            <br>
+
+        <p>4.Find the first occurrence</p>
+        <input type="text" id="fintxt" placeholder="Enter specific word.." />
+        <button onclick="findTxt()">Search</button>
+        <p id="tx"></p><br>
+          
+        <p>5. Upper Case</p>
+        <button class="btn btn-primary"onmouseover="toupr()">UpperCase</button><button class="btn btn-primary"onmouseover="tolwr()">LowerCase</button>
+<p id="hh">Hello World!</p><br>
+
+<p>6.Locate a String</p>
+<button class="btn btn-primary"onclick="func()">String Locate</button>
+<p id="de"></p>
+            </body>
+      
+    </body>
+    </html>
