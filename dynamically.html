@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+ <h1> Dynamic element </h1>
+<button onmouseover="addelement()">CLICK</button>
+
+<br/><br/>
+<ul id="thelist">
+<li>p1</li>
+</ul>
+
+
+</body>
+<script >
+	
+
+function addelement() {
+var completelist= document.getElementById("thelist");
+
+completelist.innerHTML += "<li> Hello world  </li>";
+}
+</script>
+</html>
